@@ -1,11 +1,13 @@
+import { AppBar, ThemeProvider, Toolbar } from "@material-ui/core";
 import React from "react";
+import Auth from "./Components/Auth/Auth.js";
+import Theme from "./Components/theme";
 import "./styles.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <ThemeProvider theme={Theme}>
+      <Auth title="Login" />
+    </ThemeProvider>
   );
 }
